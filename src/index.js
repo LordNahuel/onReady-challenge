@@ -32,6 +32,15 @@ class Main {
 
         this.service.getAll();
         console.log("=======================================================================>");
+        
+        const mostExpensive = this.service.getMostExpensive();
+        console.log(`Vehiculo mas caro: ${mostExpensive.name} ${mostExpensive.model}`);
+
+        const cheaper = this.service.getCheapest();
+        console.log(`Vehiculo mas barato: ${cheaper.name} ${cheaper.model}`);
+
+        const byLetter = this.service.findByLetter('model', 'Y');
+        console.log(`Vehiculo que contiene en el modelo la letra 'Y': ${byLetter.name} ${byLetter.model} ${byLetter.priceFormatted}`);
     }
 }
 
