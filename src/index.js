@@ -41,6 +41,11 @@ class Main {
 
         const byLetter = this.service.findByLetter('model', 'Y');
         console.log(`Vehiculo que contiene en el modelo la letra 'Y': ${byLetter.name} ${byLetter.model} ${byLetter.priceFormatted}`);
+
+        console.log("=======================================================================>");
+        console.log("Vehiculos ordenados por precio de mayor a menor: ");
+        this.service.getOrderAs();        
+        console.log("=======================================================================>");
     }
 }
 

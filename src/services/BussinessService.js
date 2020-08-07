@@ -32,6 +32,18 @@ class BussinessService {
             return vehicle[key] && vehicle[key].includes(letter);
         });
     }
+    
+    // extra exercise.  
+    getOrderAs() {
+        const temp = this.storage; 
+        temp.sort((a, b) => {
+            if (a.price > b.price) return -1; 
+        })
+
+        for (const vehicle of temp) {
+            console.log(vehicle.toString());
+        }
+    }
 }
 
 module.exports = BussinessService;
